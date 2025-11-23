@@ -60,7 +60,14 @@ This is a personal Starter Pack for initializing new Drupal projects. It helps s
 
 ## Installation
 
-### 1. Add the Recipe to the project
+### Prerequisites
+Before running this recipe, please ensure that:
+1. You have a **standard Drupal site installed**.
+2. You have placed the `poakpong_starter_pack` folder inside the `recipes` directory of your Drupal project (e.g., at `your-project-root/drupal/recipes/poakpong_starter_pack`).
+
+### Steps
+
+#### 1. Add the Recipe to the project
 
 Run the following commands at the project root:
 
@@ -68,12 +75,12 @@ composer config repositories.poakpong_starter_pack path recipes/poakpong_starter
 composer require poakpong/poakpong_starter_pack
 drush cache:rebuild
 
-### 2. Run the Recipe
+#### 2. Run the Recipe
 
 cd web
 php core/scripts/drupal recipe ../recipes/poakpong_starter_pack
 
-### 3. Export Config and Clear Cache
+#### 3. Export Config and Clear Cache
 
 cd ..
 drush config:export -y
