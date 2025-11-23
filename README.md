@@ -58,7 +58,7 @@ This is a personal Starter Pack for initializing new Drupal projects. It helps s
 - Regional Settings: Timezone set to Asia/Bangkok
 - System: File Sanitization enabled
 
-## Installation
+## Installation Guide
 
 ### Prerequisites
 Before running this recipe, please ensure that:
@@ -67,9 +67,18 @@ Before running this recipe, please ensure that:
 
 ### Steps
 
-#### 1. Add the Recipe to the project
+#### 1. Download the Recipe
+Go to your Drupal project root and download the recipe into your existing `recipes` folder:
 
-Run the following commands at the project root:
+cd recipes
+git clone https://github.com/poakpong/poakpong_starter_pack.git
+cd ..
+
+(Note: The `cd ..` command returns you to the project root for the next steps.)
+
+#### 2. Add the Recipe to the project
+
+Run the following commands at the project root to register and require the recipe:
 
 composer config repositories.poakpong_starter_pack path recipes/poakpong_starter_pack
 composer require poakpong/poakpong_starter_pack
@@ -77,10 +86,14 @@ drush cache:rebuild
 
 #### 2. Run the Recipe
 
+Navigate to the web directory to apply the recipe:
+
 cd web
 php core/scripts/drupal recipe ../recipes/poakpong_starter_pack
 
 #### 3. Export Config and Clear Cache
+
+Go back to the project root to export the new configurations:
 
 cd ..
 drush config:export -y
