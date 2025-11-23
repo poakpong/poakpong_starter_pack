@@ -70,9 +70,11 @@ Before running this recipe, please ensure that:
 #### 1. Download the Recipe
 Go to your Drupal project root and download the recipe into your existing `recipes` folder:
 
+```bash
 cd recipes
 git clone https://github.com/poakpong/poakpong_starter_pack.git
 cd ..
+```
 
 (Note: The `cd ..` command returns you to the project root for the next steps.)
 
@@ -80,21 +82,27 @@ cd ..
 
 Run the following commands at the project root to register and require the recipe:
 
+```bash
 composer config repositories.poakpong_starter_pack path recipes/poakpong_starter_pack
 composer require poakpong/poakpong_starter_pack
 drush cache:rebuild
+```
 
 #### 2. Run the Recipe
 
 Navigate to the web directory to apply the recipe:
 
+```bash
 cd web
 php core/scripts/drupal recipe ../recipes/poakpong_starter_pack
+```
 
 #### 3. Export Config and Clear Cache
 
 Go back to the project root to export the new configurations:
 
+```bash
 cd ..
 drush config:export -y
 drush cache:rebuild
+```
