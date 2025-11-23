@@ -1,0 +1,63 @@
+name: 'Poakpong Starter Pack'
+description: 'Poakpong Starter Pack with Admin Tools, SEO, CKEditor5 and Security'
+type: 'Site'
+
+install:
+  - admin_login_path
+  - admin_toolbar
+  - admin_toolbar_search
+  - admin_toolbar_tools
+  - asset_injector
+  - body_node_id_class
+  - ckeditor5_plugin_pack
+  - ckeditor5_plugin_pack_bookmark
+  - ckeditor5_plugin_pack_find_and_replace
+  - ckeditor5_plugin_pack_fullscreen
+  - ckeditor5_plugin_pack_templates
+  - ckeditor5_paste_filter
+  - coffee
+  - google_analytics
+  - imce
+  - login_emailusername
+  - mailjet_api
+  - maxlength
+  - menu_link_attributes
+  - metatag
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - node_edit_protection
+  - page_specific_class
+  - pathauto
+  - redirect
+  - rename_admin_paths
+  - scheduler
+  - token
+  - trash
+  - upgrade_status
+  - views_bulk_edit
+  - views_bulk_operations
+
+config:    
+  actions:
+    user.settings:
+      simple_config_update:
+        register: admin_only
+    system.date:
+      simple_config_update:
+        country:
+          default: TH
+        timezone:
+          default: Asia/Bangkok
+          user:
+            configurable: false
+            default: 0
+            warn: false
+    file.settings:
+      simple_config_update:
+        filename_sanitization:
+          transliterate: true
+          replace_whitespace: true
+          replace_non_alphanumeric: true
+          deduplicate_separators: true
+          lowercase: true
+          replacement_character: '-'
