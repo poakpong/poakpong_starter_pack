@@ -1,0 +1,7 @@
+abs_urls: false
+admin_theme: true
+roles_profiles:
+  content_editor:
+    public: content_editor_profile
+  administrator:
+    public: admin_profile

@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor_profile
+label: 'Content editor profile'
+description: 'Configuration for Content editor'
+conf:
+  usertab: false
+  extensions: 'jpg jpeg png gif pdf'
+  maxsize: 1.0
+  quota: 0.0
+  maxwidth: 1500
+  maxheight: 1500
+  replace: 0
+  thumbnail_style: ''
+  thumbnail_grid_style: false
+  ignore_usage: false
+  url_alter: false
+  folders:
+    -
+      path: 'content-uploads/[user:last-login:custom:Y]/[user:last-login:custom:Y]-[user:last-login:custom:m]'
+      permissions:
+        browse_files: true
+        browse_subfolders: true
+        upload_files: true
+        delete_files: true
+    -
+      path: 'content-uploads/[user:last-login:custom:Y]'
+      permissions:
+        browse_files: true
+        browse_subfolders: true
+    -
+      path: content-uploads
+      permissions:
+        browse_files: true
+        browse_subfolders: true

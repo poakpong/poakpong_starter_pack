@@ -57,6 +57,7 @@ This is a personal Starter Pack for initializing new Drupal projects. It helps s
 - User Registration: Administrators only
 - Regional Settings: Timezone set to Asia/Bangkok
 - System: File Sanitization enabled
+- IMCE: Admin and Content editor profiles
 
 ## Installation Guide
 
